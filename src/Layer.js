@@ -140,7 +140,7 @@
       ];
     },
     _getIntersection: function(pos) {
-      var p = this.getImageData(pos.x, pos.y),
+      var p = this._getImageData(pos.x, pos.y),
         p3 = p[3],
         colorKey,
         shape;
