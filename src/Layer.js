@@ -140,13 +140,7 @@
       ];
     },
     _getIntersection: function(pos) {
-      var ratio = this.hitCanvas.pixelRatio;
-      var p = this.hitCanvas.context.getImageData(
-        Math.round(pos.x * ratio),
-        Math.round(pos.y * ratio),
-        1,
-        1
-      ).data,
+      var p = this.getImageData(pos.x, pos.y),
         p3 = p[3],
         colorKey,
         shape;
