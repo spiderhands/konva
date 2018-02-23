@@ -2,7 +2,7 @@
  * Konva JavaScript Framework v1.7.6
  * http://konvajs.github.io/
  * Licensed under the MIT or GPL Version 2 licenses.
- * Date: Wed Nov 01 2017
+ * Date: Fri Feb 23 2018
  *
  * Original work Copyright (C) 2011 - 2013 by Eric Rowell (KineticJS)
  * Modified work Copyright (C) 2014 - 2017 by Anton Lavrenov (Konva)
@@ -11084,13 +11084,7 @@
       ];
     },
     _getIntersection: function(pos) {
-      var ratio = this.hitCanvas.pixelRatio;
-      var p = this.hitCanvas.context.getImageData(
-        Math.round(pos.x * ratio),
-        Math.round(pos.y * ratio),
-        1,
-        1
-      ).data,
+      var p = this._getImageData(pos.x, pos.y),
         p3 = p[3],
         colorKey,
         shape;
